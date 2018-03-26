@@ -34,18 +34,35 @@ public class NumbersActivity extends AppCompatActivity {
 //        Log.v("NumbersActivity", "Word at index 0: " + words[0]);
 //        Log.v("NumbersActivity", "Word at index 1: " + words[1]);
 
-        //Create an list of words
-        ArrayList<String> words = new ArrayList<String>();
-        words.add("one");
-        words.add("two");
-        words.add("three");
-        words.add("four");
-        words.add("five");
-        words.add("six");
-        words.add("seven");
-        words.add("eight");
-        words.add("nine");
-        words.add("ten");
+        //Create an list of strings (words)
+//        ArrayList<String> words = new ArrayList<String>();
+        //We create list of words
+        ArrayList<Word> words = new ArrayList<Word>();
+//        words.add("one");
+        //poniższy kod można zapisać krócej, jak w linii 45;
+//        Word w = new Word("one", "lutti");
+//        words.add(w);
+        words.add(new Word("one", "lutti"));
+//        words.add("two");
+        words.add(new Word("two", "otiiko"));
+//        words.add("three");
+        words.add(new Word("three", "tolookosu"));
+//        words.add("four");
+        words.add(new Word("four", "oyyisa"));
+//        words.add("five");
+        words.add(new Word("five", "massokka"));
+//        words.add("six");
+        words.add(new Word("six", "temmokka"));
+//        words.add("seven");
+        words.add(new Word("seven", "kenekaku"));
+//        words.add("eight");
+        words.add(new Word("eight", "kawinta"));
+//        words.add("nine");
+        words.add(new Word("nine", "wo’e"));
+//        words.add("ten");
+        words.add(new Word("ten", "na’aacha"));
+
+
 
 //        // Verify the contents of the ArrayList by printing out each ArrayList element to the logs
 //        Log.v("NumbersActivity", "Word at index 0: " + words.get(0));
@@ -91,8 +108,8 @@ public class NumbersActivity extends AppCompatActivity {
 //        ArrayAdapter<String> itemsAdapter =
 //                new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, words);
         //teraz używamy naszego layoutu;
-        ArrayAdapter<String> itemsAdapter =
-                new ArrayAdapter<String>(this, R.layout.list_item, words);
+        ArrayAdapter<Word> itemsAdapter =
+                new ArrayAdapter<Word>(this, R.layout.list_item, words);
 
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link ListView} with the view ID called list, which is declared in the
