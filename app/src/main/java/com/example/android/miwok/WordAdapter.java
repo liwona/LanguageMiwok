@@ -42,7 +42,6 @@ public class WordAdapter extends ArrayAdapter<Word>{
         mColorResourceId = colorResourceId;
     }
 
-
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
