@@ -25,6 +25,19 @@ public class Word {
     private int mAudioResourceId;
 
     /**
+     * Returns the string representation of the {@link Word} object.
+     */
+    @Override
+    public String toString() {
+        return "Word{" +
+                "mDefaultTranslation='" + mDefaultTranslation + '\'' +
+                ", mMiwokTranslation='" + mMiwokTranslation + '\'' +
+                ", mImageResourceId=" + mImageResourceId +
+                ", mAudioResourceId=" + mAudioResourceId +
+                '}';
+    }
+
+    /**
      * Create a new Word object.
      *
      * @param defaultTranslation is the word in a language that the user is already familiar with
