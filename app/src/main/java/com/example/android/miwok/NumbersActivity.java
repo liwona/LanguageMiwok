@@ -143,7 +143,7 @@ public class NumbersActivity extends AppCompatActivity {
                 // Get the {@link Word} object at the given position the user clicked on
                 Word song = words.get(position);
 
-                Log.v("NumbersActivity", "Current word: " + song);
+                Log.v("NumbersActivity", "Current word: " + song.toString());
                 // Create and setup {@link MediaPlayer} for the audio resource associated with the current Word
                 mMediaPlayer = MediaPlayer.create(NumbersActivity.this, song.getAudioResourceId() );
                 // Start the audio file
